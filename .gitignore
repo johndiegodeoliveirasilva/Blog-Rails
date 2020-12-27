@@ -12,7 +12,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/config/app_environment_variables.rb
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/

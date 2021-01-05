@@ -1,0 +1,22 @@
+<%= content_tag :div, nil, data: {controller: "sideNav"} do %>
+  
+  <div class="fixed-top">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" data-action="click->sideNav#closeNav">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <div id="main">
+      <div class="navbar navbar-expand-lg navbar-light">
+        <span style="font-size:30px;cursor:pointer" data-action="click->sideNav#openNav">&#9776; open</span>
+        <div class="mt-auto">
+          <div> Mail</div>
+          <div> My Food</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

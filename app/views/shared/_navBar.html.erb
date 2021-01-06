@@ -12,9 +12,11 @@
     <div id="main">
       <div class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand"><span style="font-size:30px;cursor:pointer" data-action="click->sideNav#openNav" id="open">&#9776;</span></a>
-          <a class="navbar-brand"> Mail</a>
           <a class="navbar-brand"> My Food</a>
+          <%= mail_to "johnoliveirasilva9@gmail.com", "Mail", class: "navbar-brand" %>
       </div>
+      <%= render "shared/main" %>
+
     </div>
   </div>
 <% end %>

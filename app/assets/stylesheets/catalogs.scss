@@ -45,6 +45,20 @@ body {
   padding: 16px;
 }
 
+.pagination {
+  padding-top: 32px!important;
+  padding-bottom: 32px!important;
+}
+
+.page-link {
+  border: none;
+}
+
+.page-link:hover {
+  background-color: #111!important;
+  color: #f1f1f1;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}

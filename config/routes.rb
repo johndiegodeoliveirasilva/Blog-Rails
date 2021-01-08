@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root "catalogs#index"
   
-  get "/catalogs", to: "catalogs#index"
+  resources :catalogs
 end

@@ -4,6 +4,7 @@ class CatalogsController < ApplicationController
   end
 
   def show
+    @catalog = Catalog.find(params[:id])
   end
 
   def new

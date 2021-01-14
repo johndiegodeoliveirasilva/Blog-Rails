@@ -1,2 +1,9 @@
 <h1><%= @catalog.title %></h1>
 <p><%= @catalog.body %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_catalog_path(@catalog) %> </li>
+  <li><%= link_to "Destroy", catalog_path(@catalog), 
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
+</ul>

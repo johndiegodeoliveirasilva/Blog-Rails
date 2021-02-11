@@ -38,13 +38,13 @@ class CatalogsController < ApplicationController
 
   def destroy
     @catalog = Catalog.find(params[:id])
+    
     @catalog.destroy
-
     redirect_to root_path
   end
 
   private
     def catalog_params
-      params.require(:catalog).permit(:title, :body)
+      params.require(:catalog).permit(:title, :body, :avatar)
     end
 end

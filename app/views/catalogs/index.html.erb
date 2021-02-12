@@ -1,5 +1,9 @@
 <div class="main">
   <div class="container">
+    <div class="float-left mt-1">
+      <div class="btn btn-light"><%= link_to 'Novo', new_catalog_url, class: "text-dark" %></div>
+    </div>
+    <br>
     <div class="row">
       <% @catalogs.each do |catalog| %>
         <div class="col-md-3 padding-bt">
@@ -8,6 +12,7 @@
             <div class="card-body">
               <h5 class="card-title"><%= catalog.title %></h5>
               <p class="card-text"><%= catalog.body %></p>
+              <%= link_to 'Edit', edit_catalog_path(catalog) %>
             </div>
           </div>
         </div>

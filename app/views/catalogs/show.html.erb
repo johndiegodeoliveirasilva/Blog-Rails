@@ -1,9 +1,24 @@
-<%= image_tag(@catalog.avatar, alt: "sandwich", class:"card-img-top", height: '600', width: '323') %>
-<h1><%= @catalog.title %></h1>
-<p><%= @catalog.body %></p>
-<ul>
-  <li><%= link_to "Edit", edit_catalog_path(@catalog) %> </li>
-  <li><%= link_to "Destroy", catalog_path(@catalog), 
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
-</ul>
+<div class="container-fluid container">
+  <div class="row">
+    <div class="col-8">
+      <%= image_tag(@catalog.avatar, alt: "avatar", class: "img-fluid rounded") %>
+    </div>
+    <div class="col-4">
+      <h1><%= @catalog.title %></h1>
+        <p><%= @catalog.body %></p>
+     
+    </div>
+  </div>
+  <br>
+  <div class="btn-group" role="group" aria-label="Edit Destroy">
+    <button type="button" class="btn btn-light border">
+      <%= link_to "Edit", edit_catalog_path(@catalog) %>
+    </button>
+    
+    <button type="button" class="btn btn-light border">
+     <%= link_to "Destroy", catalog_path(@catalog), 
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+    </button>
+  </div>
+</div>

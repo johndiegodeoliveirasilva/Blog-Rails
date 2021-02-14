@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root "catalogs#index"
   
   resources :catalogs
+  resources :ingredients
 end

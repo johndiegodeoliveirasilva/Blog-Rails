@@ -26,7 +26,7 @@ class IngredientsController < ApplicationController
   end
 
   def update
-    @ingredient = Catalog.find(params[:id])
+    @ingredient = Ingredient.find(params[:id])
 
     if @ingredient.update(ingredient_params)
       redirect_to @ingredient

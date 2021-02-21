@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="mx-auto">
+    <%= form_with model: @ingredient do |form| %>
+
+      <div >
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+        <%= @ingredient.errors.full_messages_for(:name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div>
+        <%= form.label :price %><br>
+        <%= form.text_field :price %><br>
+        <%= @ingredient.errors.full_messages_for(:price).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+      <div>
+        <%= form.label :description %><br>
+        <%= form.text_area :description %><br>
+        <%= @ingredient.errors.full_messages_for(:description).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+
+      <div>
+        <%=form.submit "Submit", disable_with: 'Submiting...' %>
+      </div>
+    <% end %>
+  </div>
+</div>

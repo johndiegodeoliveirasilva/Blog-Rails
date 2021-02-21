@@ -1,0 +1,21 @@
+<div class="container-fluid container">
+  <div class="row">
+    <div class="col">
+      <h1><%= @ingredient.name %></h1>
+      <p><%= @ingredient.price %></p>
+      <p><%= @ingredient.description %></p>
+    </div>
+  </div>
+  <br>
+  <div class="btn-group" role="group" aria-label="Edit Destroy">
+    <button type="button" class="btn btn-light border">
+      <%= link_to "Edit", edit_ingredient_path(@ingredient) %>
+    </button>
+
+    <button type="button" class="btn btn-light border">
+     <%= link_to "Destroy", ingredient_path(@ingredient),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="main">
+  <div class="container">
+    <div class="float-left mt-1">
+      <div class="btn btn-light cover-fit"><%= link_to 'Novo', new_ingredient_url, class: "text-dark" %></div>
+    </div>
+    <br>
+    <div class="row">
+      <% @ingredients.each do |ingredient| %>
+      <% byebug %>
+        <div class="col-md-3 padding-bt">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><%= ingredient.name %></h5>
+              <p class="card-text"><%= ingredient.description %></p>
+              <p class="card-text"><%= ingredient.price %></p>
+              <%= link_to 'Edit', edit_ingredient_path(ingredient) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

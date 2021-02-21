@@ -9,6 +9,7 @@
 8.times do |_|
 Catalog.create!(
   title: Faker::Book.title,
-  body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false))
-  puts 'Creating "#{_}'
+  body: Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false),
+  avatar: Faker::LoremFlickr.image(size: "300x300", search_terms: ['sports', 'fitness'], match_all: true))
+  puts 'Creating "#{}'
 end

@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-  
+
   def index
     @ingredients = Ingredient.all
   end
@@ -26,7 +26,7 @@ class IngredientsController < ApplicationController
   end
 
   def update
-    @ingredient = Catalog.find(params[:id])
+    @ingredient = Ingredient.find(params[:id])
 
     if @ingredient.update(ingredient_params)
       redirect_to @ingredient
@@ -37,7 +37,7 @@ class IngredientsController < ApplicationController
 
   def destroy
     @ingredient = Ingredient.find(params[:id])
-    
+
     @ingredient.destroy
     redirect_to ingredients_path
   end

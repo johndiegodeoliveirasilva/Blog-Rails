@@ -14,7 +14,7 @@ class CatalogsController < ApplicationController
 
   def create
     @catalog = Catalog.new(catalog_params)
-    
+
     if @catalog.save
       redirect_to @catalog
     else
@@ -38,7 +38,7 @@ class CatalogsController < ApplicationController
 
   def destroy
     @catalog = Catalog.find(params[:id])
-    
+
     @catalog.destroy
     redirect_to root_path
   end

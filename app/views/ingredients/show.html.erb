@@ -1,22 +1,20 @@
 <div class="container-fluid container">
   <div class="row">
-    <div class="col-8">
-      <%= image_tag(@catalog.avatar, alt: "avatar", class: "img-fluid rounded") %>
-    </div>
-    <div class="col-4">
-      <h1><%= @catalog.title %></h1>
-        <p><%= @catalog.body %></p>
-
+    <div class="col">
+      <h1><%= @ingredient.name %></h1>
+      <p><%= @ingredient.price %></p>
+      <p><%= @ingredient.description %></p>
+      <%= image_tag(@ingredient.avatar, alt: "avatar", class: "img-fluid rounded") %>
     </div>
   </div>
   <br>
   <div class="btn-group" role="group" aria-label="Edit Destroy">
     <button type="button" class="btn btn-light border">
-      <%= link_to "Edit", edit_catalog_path(@catalog) %>
+      <%= link_to "Edit", edit_ingredient_path(@ingredient) %>
     </button>
 
     <button type="button" class="btn btn-light border">
-     <%= link_to "Destroy", catalog_path(@catalog),
+     <%= link_to "Destroy", ingredient_path(@ingredient),
                     method: :delete,
                     data: { confirm: "Are you sure?" } %>
     </button>

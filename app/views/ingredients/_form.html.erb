@@ -26,6 +26,10 @@
         <% end %>
       </div>
 
+      <div>
+        <%= form.label :avatar %><br>
+        <%= form.file_field :avatar %>
+      </div>
 
       <div>
         <%=form.submit "Submit", disable_with: 'Submiting...' %>

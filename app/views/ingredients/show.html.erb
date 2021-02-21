@@ -4,6 +4,7 @@
       <h1><%= @ingredient.name %></h1>
       <p><%= @ingredient.price %></p>
       <p><%= @ingredient.description %></p>
+      <%= image_tag(@ingredient.avatar, alt: "avatar", class: "img-fluid rounded") %>
     </div>
   </div>
   <br>
